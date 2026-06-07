@@ -49,9 +49,9 @@ components:
   type: ColumnPanel
 - components:
   - layout_properties: {}
-    name: button_1
+    name: label_5
     properties: {text: Home}
-    type: Button
+    type: Label
   - layout_properties: {}
     name: label_6
     properties: {text: About}
