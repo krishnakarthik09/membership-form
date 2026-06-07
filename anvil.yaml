@@ -1,12 +1,39 @@
 allow_embedding: false
+db_schema:
+  gym_fitness:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      client_hidden: false
+      name: Name
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      client_hidden: false
+      name: Weignt
+      type: number
+    - admin_ui: {order: 2, width: 200}
+      client_hidden: false
+      name: Address
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      client_hidden: false
+      name: Personal
+      type: bool
+    indexes: []
+    server: full
+    title: Gym fitness
 dependencies: []
-name: M3 App 1
-package_name: M3_App_1
+metadata: {description: Join our Gym for personal fitness, title: GYM MEMEBERSHIP WEBSITE}
+name: MEMBERSHIP FORM
+package_name: MEMBERSHIP_FORM
 renamed: true
 runtime_options:
   client_version: '3'
   legacy_features: {bootstrap3: true, class_names: true}
   server_spec: {base: python310-minimal}
   version: 3
-services: []
+services:
+- client_config: {enable_v2: true}
+  server_config: {}
+  source: /runtime/services/tables.yml
 startup_form: Form1
