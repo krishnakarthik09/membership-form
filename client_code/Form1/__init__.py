@@ -22,3 +22,8 @@ class Form1(Form1Template):
     personal=self.check_box_1.checked
     anvil.server.call('submit',name=name,address=address,weight=weight,personal=personal)
     Notification('Your response has been recorded').show()
+
+  @handle("button_1", "click")
+  def home_button(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass  # Write Code Here
