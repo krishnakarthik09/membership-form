@@ -1,27 +1,27 @@
 allow_embedding: false
 db_schema:
-  gym_fitness:
+  gym:
     client: none
     columns:
     - admin_ui: {order: 0, width: 200}
       client_hidden: false
-      name: Name
+      name: name
       type: string
     - admin_ui: {order: 1, width: 200}
       client_hidden: false
-      name: Weignt
+      name: weight
       type: number
     - admin_ui: {order: 2, width: 200}
       client_hidden: false
-      name: Address
+      name: address
       type: string
     - admin_ui: {order: 3, width: 200}
       client_hidden: false
-      name: Personal
+      name: personal
       type: bool
     indexes: []
     server: full
-    title: Gym fitness
+    title: gym
 dependencies: []
 metadata: {description: Join our Gym for personal fitness, title: GYM MEMEBERSHIP WEBSITE}
 name: MEMBERSHIP FORM
@@ -36,4 +36,7 @@ services:
 - client_config: {enable_v2: true}
   server_config: {}
   source: /runtime/services/tables.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/anvil/email.yml
 startup_form: Form1

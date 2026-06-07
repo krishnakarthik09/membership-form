@@ -1,3 +1,4 @@
+import anvil.email
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
@@ -10,8 +11,13 @@ import anvil.server
 # them with @anvil.server.callable.
 # Here is an example - you can replace it with your own:
 #
-# @anvil.server.callable
+#@anvil.server.callable
 # def say_hello(name):
 #   print("Hello, " + name + "!")
 #   return 42
 #
+@anvil.server.callable
+def submit(name,weight,address,personal):
+  app_tables.gym.add_row(name=name,weight=weight,address=address,personal=personal)
+  anvil.email.send(to="krishnakart209@gmail.com",subject="Response from Gym app",text=f"Feedback From{name} weight is {weight} and they live at:{address}. personal training is required:{personal}")
+  
