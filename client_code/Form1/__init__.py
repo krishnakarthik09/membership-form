@@ -31,8 +31,8 @@ class Form1(Form1Template):
   @handle("button_1", "click")
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-  anvil.js.window.open(
-    "https://krishnakarthik09.github.io/fitzone-gym-website/",
-    "_self"
-  )
+    anvil.js.window.open(
+      "https://krishnakarthik09.github.io/fitzone-gym-website/",
+      "_self"
+    )
   
