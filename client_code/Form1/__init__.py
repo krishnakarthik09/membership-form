@@ -35,4 +35,20 @@ class Form1(Form1Template):
       "https://krishnakarthik09.github.io/fitzone-gym-website/",
       "_self"
     )
+
+  @handle("button_2", "click")
+  def button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.js.window.open(
+      "https://www.instagram.com/__krishna_03___?igsh=MXV4ZHRtbXRxMHRleQ==",
+      "_self"
+    )
+
+  @handle("button_3", "click")
+  def button_3_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    anvil.js.window.open(
+      "https://www.facebook.com/share/196R92uwmj/",
+      "_self"
+    )
   
