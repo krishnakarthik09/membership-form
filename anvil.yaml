@@ -23,6 +23,14 @@ db_schema:
       client_hidden: false
       name: mobile
       type: number
+    - admin_ui: {order: 5, width: 200}
+      client_hidden: false
+      name: email
+      type: string
+    - admin_ui: {order: 6, width: 200}
+      client_hidden: false
+      name: plan
+      type: string
     indexes: []
     server: full
     title: gym

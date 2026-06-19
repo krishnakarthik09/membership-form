@@ -19,11 +19,13 @@ class Form1(Form1Template):
     """This method is called when the button is clicked"""
     name =self.text_box_1.text
     mobile=int(self.text_box_3.text)
+    email=self.text_box_4.text         
     weight =int(self.text_box_2.text)
     address = self.text_area_1.text
     personal=self.check_box_1.checked
-    anvil.server.call('submit',name=name,address=address,weight=weight,personal=personal,mobile=mobile)
-    Notification('Your response has been recorded').show()
+    plan=self.drop_down_1.selected_value
+    anvil.server.call('submit',name=name,address=address,weight=weight,personal=personal,mobile=mobile,email=email,plan=plan)
+    Notification('Your Membership Regestration is Successfull').show()
 
 
  
