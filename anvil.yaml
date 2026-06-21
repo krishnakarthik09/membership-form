@@ -34,6 +34,41 @@ db_schema:
     indexes: []
     server: full
     title: gym
+  subscriptions:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      client_hidden: false
+      name: member
+      target: gym
+      type: link_single
+    - admin_ui: {order: 1, width: 200}
+      client_hidden: false
+      name: plan
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      client_hidden: false
+      name: status
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      client_hidden: false
+      name: renewal_date
+      type: date
+    - admin_ui: {order: 2.5, width: 200}
+      client_hidden: false
+      name: start_date
+      type: date
+    - admin_ui: {order: 4, width: 200}
+      client_hidden: false
+      name: amount_paid
+      type: number
+    - admin_ui: {order: 5, width: 200}
+      client_hidden: false
+      name: payment_date
+      type: date
+    indexes: []
+    server: full
+    title: subscriptions
 dependencies: []
 metadata: {description: Join our Gym for personal fitness, title: GYM MEMEBERSHIP WEBSITE}
 name: MEMBERSHIP FORM
