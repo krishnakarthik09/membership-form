@@ -34,7 +34,7 @@ class Form1(Form1Template):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     anvil.js.window.open(
-      "https://krishnakarthik09.github.io/fitzone-gym-website/",
+      "https://krishnakarthik09.github.io/fitzone-gym-web-app/",
       "_self"
     )
 
@@ -53,4 +53,7 @@ class Form1(Form1Template):
       "https://www.facebook.com/share/196R92uwmj/",
       "_self"
     )
-  
+
+  @handle("admin_link_button", "click")
+  def admin_link_button_click(self, **event_args):
+   open_form('AdminDashboard')
