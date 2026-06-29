@@ -11,7 +11,6 @@ def check_admin_password(password):
 
 @anvil.server.callable
 def get_dashboard_data():
-  """Returns every member with their latest subscription info."""
   rows = []
   today = date.today()
 
@@ -34,7 +33,7 @@ def get_dashboard_data():
       if renewal_date and renewal_date < today:
         status = "Expired"
       else:
-        status = latest['status'] or "Active"
+        status = (latest['status'] or "Active").capitalize()
 
     rows.append({
       "name": member['name'],
@@ -50,6 +49,8 @@ def get_dashboard_data():
 
   return rows
 
+
+  
 @anvil.server.callable
 def get_payment_history(member_name):
   """Returns full payment history for one member, most recent first."""
@@ -83,3 +84,6 @@ def add_subscription(member_name, plan, status, start_date, renewal_date, amount
     amount_paid=amount_paid,
     payment_date=payment_date,
   )
+@anvil.server.callable
+def get_all_member_names():
+  return [m['name'] for m in app_tables.gym.search()]
