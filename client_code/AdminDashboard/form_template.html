@@ -1,12 +1,14 @@
 <anvil-form container="ColumnPanel">
   <anvil-component type="TextBox" name="password_box" prop:placeholder="Admin password" prop:hide_text="true" container:grid_position="TLFYEJ,LGRRVF"></anvil-component>
   <anvil-component type="Button" name="unlock_button" prop:text="Unlock
-    " prop:align="center" prop:font_size="15" prop:background="theme:Secondary" prop:foreground="theme:On Secondary" container:grid_position="VMDOYG,CYKHES"></anvil-component>
-  <anvil-component type="Label" name="total_members_label" container:grid_position="IGAEBU,OZLMVV"></anvil-component>
+      " prop:align="center" prop:font_size="15" prop:background="theme:Secondary Container" prop:foreground="theme:On Primary Container" container:grid_position="VMDOYG,CYKHES"></anvil-component>
+  <anvil-component type="Button" name="AddSubscription" prop:text="Subscriptions
+  " prop:background="theme:Light Overlay 1" prop:foreground="theme:On Primary Container" prop:font_size="16" prop:bold="true" container:grid_position="KACGWR,SPIMHH"></anvil-component>
+  <anvil-component type="Label" name="total_members_label" container:grid_position="LJHNFQ,SCYGXE"></anvil-component>
   <anvil-component type="Label" name="active_label" container:grid_position="AHEOIP,MMNZJC"></anvil-component>
   <anvil-component type="Label" name="expired_label" container:grid_position="GAZBQW,PPTCIW"></anvil-component>
   <anvil-component type="Label" name="revenue_label" container:grid_position="UJRGYJ,FFBGBJ"></anvil-component>
-  <anvil-component type="DataGrid" name="members_grid" prop:columns='[{"id":"JKSDUP","title":"Name","data_key":"name","expand":true},{"id":"VJQQOR","title":"Plan","data_key":"plan"},{"id":"OJLQEN","title":"Status","data_key":"status"},{"id":"NEAWOH","data_key":"renewal_date","title":"Renewal Date"},{"id":"CREOPU","data_key":"payment_date","title":"Last Payment"},{"id":"PBWOGS","data_key":"amount_paid","title":"Amount"}]' container:grid_position="QHVZKW,EAWXAW">
+  <anvil-component type="DataGrid" name="members_grid" prop:columns='[{"id":"JKSDUP","title":"Name","data_key":"name","expand":true},{"id":"VJQQOR","title":"Plan","data_key":"plan"},{"id":"OJLQEN","title":"Status","data_key":"status"},{"id":"NEAWOH","data_key":"renewal_date","title":"Renewal Date"},{"id":"CREOPU","data_key":"payment_date","title":"Last Payment"},{"id":"PBWOGS","data_key":"amount_paid","title":"Amount"}]' container:grid_position="KEQYLV,NXGWGP">
     <anvil-component type="RepeatingPanel" name="members_repeating_panel" prop:item_template="MEMBERSHIP_FORM.AdminDashboard.RowTemplate2" prop:visible="true" bind:items container:pinned="false"></anvil-component>
   </anvil-component>
 </anvil-form>

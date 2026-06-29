@@ -14,6 +14,7 @@ class AddSubscription(AddSubscriptionTemplate):
     self.member_dropdown.items = names
     self.result_label.text = ""
 
+  @handle("save_button", "click")
   def save_button_click(self, **event_args):
     member_name = self.member_dropdown.selected_value
     plan = self.plan_box.text

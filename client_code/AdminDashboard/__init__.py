@@ -14,6 +14,7 @@ class AdminDashboard(AdminDashboardTemplate):
     self.active_label.visible = False
     self.expired_label.visible = False
     self.revenue_label.visible = False
+    self.AddSubscription.visible = False   
 
   @handle("unlock_button", "click")
   def unlock_button_click(self, **event_args):
@@ -22,6 +23,7 @@ class AdminDashboard(AdminDashboardTemplate):
     if anvil.server.call('check_admin_password', entered):
       self.password_box.visible = False
       self.unlock_button.visible = False
+      self.AddSubscription.visible = True
       self.load_dashboard()
     else:
       alert("Wrong password.")
@@ -46,3 +48,8 @@ class AdminDashboard(AdminDashboardTemplate):
 
     self.members_repeating_panel.items = data
     self.members_grid.visible = True
+
+  @handle("AddSubscription", "click")
+  def AddSubscription_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('AddSubscription')
