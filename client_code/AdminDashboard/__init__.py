@@ -17,7 +17,7 @@ class AdminDashboard(AdminDashboardTemplate):
 
   @handle("unlock_button", "click")
   def unlock_button_click(self, **event_args):
-     print("Button clicked!")
+    print("Button clicked!")
     entered = self.password_box.text
     if anvil.server.call('check_admin_password', entered):
       self.password_box.visible = False
@@ -44,5 +44,5 @@ class AdminDashboard(AdminDashboardTemplate):
     self.expired_label.visible = True
     self.revenue_label.visible = True
 
-    self.members_grid.items = data
+    self.members_repeating_panel.items = data
     self.members_grid.visible = True
