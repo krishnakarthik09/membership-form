@@ -87,10 +87,6 @@ components:
   type: ColumnPanel
 - components:
   - layout_properties: {}
-    name: button_1
-    properties: {background: 'theme:Primary Container', font_size: 20, foreground: 'theme:On Background', text: Home}
-    type: Button
-  - layout_properties: {}
     name: button_2
     properties: {background: 'rgba(225, 48, 108, 1.0)', font_size: 20, foreground: 'theme:On Background', text: Instagram}
     type: Button
