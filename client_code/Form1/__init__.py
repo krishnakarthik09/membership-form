@@ -34,7 +34,7 @@ class Form1(Form1Template):
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
     anvil.js.window.open(
-      "https://krishnakarthik09.github.io/fitzone-gym-web-app/",
+      "http://127.0.0.1:5000/",
       "_self"
     )
 
